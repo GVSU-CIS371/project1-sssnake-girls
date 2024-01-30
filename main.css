@@ -10,16 +10,37 @@ html {
   display: flexbox;  
 }
 
-#app>ul{
-
+#app header{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px;
 }
 
-.store-view{
+#app ul{
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+body main{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.store-item{
+  display: flexbox;
+  padding: 10px;
+  border-style: solid;
+}
+
+.store-item span{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .store-item img{
-  object-fit: contain;
+  /*object-fit: contain;*/
+  max-height: 200px;
+  max-width: 200px;
 }
