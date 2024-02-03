@@ -4,43 +4,122 @@ html {
 
   margin: 0px;
   padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app{
-  display: flexbox;  
+  display: grid;
+  grid-template-rows: 1fr 12fr 1fr;  
+  padding: 10px;
 }
 
 #app header{
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  /*margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+  height: 50%;*/
+  background-color: hsl(39, 100%, 70%);
 }
 
-#app ul{
+#app header h1{
+  margin: auto;
+  height: 50%;
+  width: 100%;
+}
+
+#app header nav{
+  margin-top: auto;
+  height: 80%;
+}
+
+#app header ul{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  list-style-type: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  float: right;
 }
 
 body main{
   display: grid;
   grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 5px;
 }
 
 .store-item{
-  display: flexbox;
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 50% 5% 30%;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
   border-style: solid;
-}
-
-.store-item span{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  border-width: 2px;
 }
 
 .store-item img{
-  /*object-fit: contain;*/
+  margin: auto;
   max-height: 200px;
   max-width: 200px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.store-item p:nth-child(2){
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-weight: bold;
+}
+
+.store-item p:nth-child(3){
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.store-item span:first-of-type{
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.store-item span:nth-of-type(2){
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.store-item span:nth-of-type(3){
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+footer{
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  background-color: hsl(39, 100%, 70%);
 }
