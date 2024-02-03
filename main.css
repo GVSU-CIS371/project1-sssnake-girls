@@ -1,7 +1,5 @@
 body,
 html {
-  /* height:100%; */
-
   margin: 0px;
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -19,25 +17,21 @@ html {
   padding: 10px;
   border-style: solid;
   border-width: 2px;
-  /*margin-left: auto;
-  margin-right: auto;
-  width: 98%;
-  height: 50%;*/
   background-color: hsl(39, 100%, 70%);
 }
 
-#app header h1{
+#app header h1{ /* My Store */
   margin: auto;
   height: 50%;
   width: 100%;
 }
 
-#app header nav{
+#app header nav{ /* Header Links Container */
   margin-top: auto;
   height: 80%;
 }
 
-#app header ul{
+#app header ul{  /* Header Links */
   display: grid;
   gap: 10px;
   list-style-type: none;
@@ -55,17 +49,17 @@ body main{
   gap: 5px;
 }
 
-.store-item{
+.store-item{  /* Item Container */
   display: grid;
   gap: 5px;
-  grid-template-rows: 50% 5% 30%;
+  grid-template-rows: 50% 10% 30% 10%;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
   border-style: solid;
   border-width: 2px;
 }
 
-.store-item img{
+.store-item img{  /* Item Image */
   margin: auto;
   max-height: 200px;
   max-width: 200px;
@@ -75,7 +69,7 @@ body main{
   grid-column-end: 4;
 }
 
-.store-item p:nth-child(2){
+.store-item p:nth-child(2){  /* Item Name */
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 1;
@@ -83,34 +77,28 @@ body main{
   font-weight: bold;
 }
 
-.store-item p:nth-child(3){
+.store-item p:nth-child(3){  /* Item Description */
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 4;
 }
 
-.store-item span:first-of-type{
-  /*display: grid;
-  grid-template-columns: 1fr 1fr 1fr;*/
+.store-item span:first-of-type{  /* Item Rating */
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 1;
 }
 
-.store-item span:nth-of-type(2){
-  /*display: grid;
-  grid-template-columns: 1fr 1fr 1fr;*/
+.store-item span:nth-of-type(2){  /* Item Price */
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 2;
 }
 
-.store-item span:nth-of-type(3){
-  /*display: grid;
-  grid-template-columns: 1fr 1fr 1fr;*/
+.store-item span:nth-of-type(3){  /* Item Stock */
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 3;
